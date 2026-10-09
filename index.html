@@ -48,6 +48,7 @@ h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;letter-spacing:-.01em;
   line-height:1.25;margin:0 0 18px;max-width:22ch}
 p{margin:0 0 14px;color:var(--szary)}
 .jasny{color:var(--biel)}
+.wyroznik{margin:-6px 0 30px;max-width:40ch;font-size:1.02rem}
 
 /* ---------- gorny pasek ---------- */
 .pasek{position:fixed;inset:0 0 auto;z-index:50;
@@ -159,6 +160,8 @@ p{margin:0 0 14px;color:var(--szary)}
 .adres h3{margin:0 0 7px;font-size:.68rem;font-weight:600;letter-spacing:.2em;
   text-transform:uppercase;color:var(--szary2)}
 .adres p{margin:0;color:var(--biel);font-size:.95rem;line-height:1.5}
+.mapa{display:inline-block;margin-top:6px;color:var(--szary);font-size:.86rem;border-bottom:1px solid rgba(242,239,234,.25);padding-bottom:1px;transition:color 180ms cubic-bezier(.23,1,.32,1),border-color 180ms cubic-bezier(.23,1,.32,1)}
+.mapa:hover{color:var(--biel);border-color:var(--czerwien)}
 
 /* ---------- stopka ---------- */
 footer{border-top:1px solid var(--linia);padding:30px 0 40px;
@@ -277,6 +280,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
   <div class="wrap">
     <p class="nad">Realizacje</p>
     <h2>Wybrane obiekty oddane do użytku</h2>
+    <p class="jasny wyroznik">Obiekty zbudowane i oddane do użytku, nie wizualizacje.</p>
     <div class="siatka" id="siatka">
       <figure class="kafel szeroki" tabindex="0" role="button" aria-label="Powiększ: Galeria Venus w Świdniku">
         <img src="img/hero-venus.webp" alt="Galeria Venus w Świdniku o zmierzchu">
@@ -315,10 +319,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
   <div class="wrap">
     <p class="nad">Kontakt</p>
     <h2>Porozmawiajmy o projekcie</h2>
-    <p><a class="duzy" href="mailto:arch@rossa.pl">arch@rossa.pl</a></p>
+    <p><a class="duzy" href="mailto:rossa@rossa.pl">rossa@rossa.pl</a></p>
     <div class="adres">
       <div><h3>Pracownia</h3><p>AMR Architekci &amp; Partnerzy<br>Mirosław Rossa, architekt</p></div>
-      <div><h3>Adres</h3><p>ul. Zbożowa 6<br>20-827 Lublin</p></div>
+      <div><h3>Adres</h3><p>ul. Zbożowa 6<br>20-827 Lublin<br><a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Zbo%C5%BCowa+6%2C+20-827+Lublin" target="_blank" rel="noopener">Dojazd na mapie</a></p></div>
       <div><h3>Telefon</h3><p><a href="tel:+48501061258">+48 501 061 258</a><br><a href="tel:+48817428658">+48 81 742 86 58</a></p></div>
     </div>
   </div>
@@ -327,7 +331,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
 <footer>
   <div class="wrap">
     <span>&copy; AMR Architekci &amp; Partnerzy, Lublin</span>
-    <span>arch@rossa.pl &middot; +48 501 061 258</span>
+    <span>rossa@rossa.pl &middot; +48 501 061 258</span>
   </div>
   <div class="wrap">
     <p class="nota">Wersja koncepcyjna przygotowana do rozmowy o nowej stronie. Zdjęcia i opisy pochodzą z materiałów pracowni, część wymaga uzupełnienia i potwierdzenia podpisów. Strona nie jest jeszcze podpięta pod domenę ani zgłoszona do wyszukiwarek.</p>
