@@ -146,10 +146,12 @@ p{margin:0 0 15px;color:var(--szary)}
   grid-column:span 2;aspect-ratio:4/3}
 .kafel.duzy{grid-column:span 4;aspect-ratio:16/9}
 .kafel.sredni{grid-column:span 3;aspect-ratio:3/2}
+/* kafel bez wlasnych proporcji rozciaga sie do wysokosci sasiada w rzedzie */
+.kafel.wypelnia{aspect-ratio:auto;height:100%}
 @media(max-width:900px){
   .siatka{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-  .kafel,.kafel.duzy,.kafel.sredni{grid-column:span 2;aspect-ratio:3/2}
-  .kafel.polowa{grid-column:span 1;aspect-ratio:1/1}
+  .kafel,.kafel.duzy,.kafel.sredni,.kafel.wypelnia{grid-column:span 2;
+    aspect-ratio:3/2;height:auto}
 }
 .kafel img{width:100%;height:100%;object-fit:cover;
   transition:transform 620ms var(--ease),filter 420ms var(--ease);
@@ -299,7 +301,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <img src="img/r-venus2.webp" alt="Galeria Venus 2 w Świdniku" loading="lazy" decoding="async">
         <figcaption><b>Galeria Venus 2</b><em>Świdnik &middot; 2009-2012</em></figcaption>
       </figure>
-      <figure class="kafel" tabindex="0" role="button">
+      <figure class="kafel wypelnia" tabindex="0" role="button">
         <img src="img/r-olimp5.webp" alt="Galeria Olimp 5 z multikinem w Lublinie" loading="lazy" decoding="async">
         <figcaption><b>Olimp 5, multikino</b><em>Lublin &middot; 2011-2013</em></figcaption>
       </figure>
@@ -311,11 +313,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <img src="img/r-venus1.webp" alt="Galeria Venus 1 w Świdniku" loading="lazy" decoding="async">
         <figcaption><b>Galeria Venus 1</b><em>Świdnik</em></figcaption>
       </figure>
-      <figure class="kafel polowa" tabindex="0" role="button">
+      <figure class="kafel wypelnia" tabindex="0" role="button">
         <img src="img/r-olimp1.webp" alt="Galeria Olimp 1 w Lublinie" loading="lazy" decoding="async">
         <figcaption><b>Galeria Olimp 1</b><em>Lublin</em></figcaption>
       </figure>
-      <figure class="kafel polowa" tabindex="0" role="button">
+      <figure class="kafel duzy" tabindex="0" role="button">
         <img src="img/r-olimp2.webp" alt="Galeria Olimp 2 w Lublinie" loading="lazy" decoding="async">
         <figcaption><b>Galeria Olimp 2</b><em>Lublin</em></figcaption>
       </figure>
