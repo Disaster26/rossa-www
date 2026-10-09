@@ -6,23 +6,26 @@
 <title>AMR Architekci &amp; Partnerzy - Mirosław Rossa, Lublin</title>
 <meta name="description" content="Pracownia architektoniczna AMR, Lublin. Od 1997 roku projekty galerii handlowych, obiektów użyteczności publicznej i przemysłowych. Olimp, Venus, Bogdanka, DAKO Next.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0A0807">
+<meta name="theme-color" content="#1B1916">
 <meta property="og:title" content="AMR Architekci &amp; Partnerzy - Lublin">
 <meta property="og:description" content="Pracownia architektoniczna od 1997 roku. Galerie handlowe, obiekty użyteczności publicznej, obiekty przemysłowe.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp" media="(min-width:701px)">
+<link rel="preload" as="image" href="img/hero-m.webp" media="(max-width:700px)">
 <style>
 :root{
-  --tlo:#0A0807;
-  --tlo2:#120F0D;
-  --biel:#F2EFEA;
-  --szary:#948D86;
-  --szary2:#5E5751;
-  --czerwien:#C62A1F;
-  --linia:rgba(242,239,234,.12);
-  --max:1240px;
+  --tlo:#1B1916;
+  --tlo2:#232020;
+  --tlo3:#2C2825;
+  --biel:#F6F3EE;
+  --szary:#ADA69C;
+  --szary2:#7A736B;
+  --czerwien:#D8452F;
+  --linia:rgba(246,243,238,.14);
+  --max:1300px;
   --ease:cubic-bezier(.23,1,.32,1);
 }
 *{box-sizing:border-box}
@@ -31,173 +34,192 @@ html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--tlo);color:var(--biel);
   font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
 }
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
 @media(max-width:620px){.wrap{padding:0 18px}}
 
-/* ---------- nadtytuly sekcji ---------- */
-.nad{display:flex;align-items:center;gap:14px;margin:0 0 26px;
-  font-size:.68rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
-  color:var(--szary)}
-.nad::before{content:"";width:28px;height:1px;background:var(--czerwien);flex:0 0 28px}
-
-h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;letter-spacing:-.01em;
-  line-height:1.25;margin:0 0 18px;max-width:22ch}
-p{margin:0 0 14px;color:var(--szary)}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:500;letter-spacing:-.015em;
+  line-height:1.2;margin:0 0 20px;max-width:22ch}
+p{margin:0 0 15px;color:var(--szary)}
 .jasny{color:var(--biel)}
-.wyroznik{margin:-6px 0 30px;max-width:40ch;font-size:1.02rem}
+.nad{display:flex;align-items:center;gap:14px;margin:0 0 24px;
+  font-size:.7rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--szary2)}
+.nad::before{content:"";width:30px;height:1px;background:var(--czerwien);flex:0 0 30px}
 
 /* ---------- gorny pasek ---------- */
-.pasek{position:fixed;inset:0 0 auto;z-index:50;
-  background:rgba(10,8,7,0);backdrop-filter:blur(0);
-  transition:background .3s var(--ease),backdrop-filter .3s var(--ease),
-             border-color .3s var(--ease);
-  border-bottom:1px solid transparent}
-.pasek.tlo{background:rgba(10,8,7,.88);backdrop-filter:blur(10px);
-  border-bottom-color:var(--linia)}
-.pasek .wrap{display:flex;align-items:center;justify-content:space-between;
-  height:72px}
-.znak{display:flex;align-items:baseline;gap:9px;font-weight:700;
-  letter-spacing:.22em;font-size:1.02rem}
-.znak i{width:5px;height:5px;border-radius:50%;background:var(--czerwien);
-  display:inline-block;transform:translateY(-4px)}
-.znak small{font-size:.58rem;letter-spacing:.2em;color:var(--szary);
-  font-weight:500;margin-left:4px}
-.menu{display:flex;gap:30px;font-size:.74rem;font-weight:500;
-  letter-spacing:.17em;text-transform:uppercase;color:var(--szary)}
-.menu a{transition:color .16s var(--ease)}
-.menu a:hover{color:var(--biel)}
-@media(max-width:860px){.menu{display:none}.znak small{display:none}}
+.pasek{position:fixed;inset:0 0 auto;z-index:60;padding:18px 0;
+  transition:background 320ms var(--ease),padding 320ms var(--ease),
+    backdrop-filter 320ms var(--ease)}
+.pasek.przyklejony{background:rgba(27,25,22,.93);backdrop-filter:blur(14px);padding:12px 0;
+  border-bottom:1px solid var(--linia)}
+.pasek .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.znak{display:flex;align-items:baseline;gap:9px;font-weight:600;letter-spacing:.14em;
+  font-size:1rem}
+.znak i{font-style:normal;color:var(--czerwien)}
+.znak span{font-size:.62rem;font-weight:400;letter-spacing:.2em;color:var(--szary);
+  text-transform:uppercase}
+.menu{display:flex;gap:30px;font-size:.82rem;letter-spacing:.04em}
+.menu a{color:var(--szary);transition:color 180ms var(--ease)}
+.menu a:hover,.menu a:focus-visible{color:var(--biel)}
+.tel{font-size:.82rem;color:var(--biel);border:1px solid var(--linia);
+  padding:8px 16px;border-radius:999px;
+  transition:border-color 200ms var(--ease),background 200ms var(--ease)}
+.tel:hover{border-color:var(--czerwien);background:rgba(216,69,47,.1)}
+@media(max-width:900px){.menu{display:none}}
+@media(max-width:480px){.tel{display:none}}
 
 /* ---------- hero ---------- */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
-  overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:center 42%}
-.hero::after{content:"";position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(10,8,7,.78) 0%,rgba(10,8,7,.30) 34%,
-    rgba(10,8,7,.52) 66%,rgba(10,8,7,.94) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-bottom:9vh;width:100%}
-.hero .lock{font-size:clamp(2.6rem,9vw,5.6rem);font-weight:700;line-height:1;
-  letter-spacing:.14em;margin:0 0 14px;display:flex;align-items:center;gap:.14em}
-.hero .lock b{font-weight:700}
-.hero .lock i{width:.13em;height:.13em;border-radius:50%;background:var(--czerwien);
-  display:inline-block;transform:translateY(-.1em)}
-.hero .pod{font-size:clamp(.72rem,2.1vw,1rem);letter-spacing:.34em;
-  text-transform:uppercase;color:var(--biel);margin:0 0 30px;font-weight:500}
-.hero .kreska{width:54px;height:2px;background:var(--czerwien);margin:0 0 26px}
-.hero .zdanie{font-size:clamp(1rem,2.2vw,1.3rem);color:var(--biel);
-  max-width:34ch;line-height:1.5;margin:0 0 34px;font-weight:300}
-.hero .meta{display:flex;flex-wrap:wrap;gap:12px 34px;font-size:.72rem;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--szary)}
-.hero .meta b{color:var(--biel);font-weight:600}
+.hero{position:relative;min-height:94svh;display:flex;align-items:flex-end;
+  overflow:hidden;background:#15130F}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:50% 54%}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(21,19,15,.62) 0%,rgba(21,19,15,.14) 34%,
+    rgba(21,19,15,.5) 72%,rgba(27,25,22,.96) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:62px;padding-top:120px}
+.hero-znak{font-size:clamp(3.2rem,11vw,7.4rem);font-weight:600;letter-spacing:-.035em;
+  line-height:.92;margin:0}
+.hero-znak i{font-style:normal;color:var(--czerwien)}
+.hero-pod{margin:16px 0 0;font-size:clamp(.78rem,1.5vw,.95rem);font-weight:400;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--biel);opacity:.9}
+.hero-txt{margin:26px 0 0;max-width:40ch;font-size:clamp(1rem,1.6vw,1.12rem);
+  color:var(--biel);opacity:.88}
+.hero-dol{margin-top:38px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;
+  background:var(--czerwien);color:#fff;font-size:.88rem;font-weight:500;
+  letter-spacing:.03em;border-radius:2px;
+  transition:transform 160ms var(--ease),filter 200ms var(--ease)}
+.btn:hover{filter:brightness(1.1)}
+.btn:active{transform:scale(.975)}
+.btn2{display:inline-flex;align-items:center;gap:10px;font-size:.88rem;
+  color:var(--biel);border-bottom:1px solid rgba(246,243,238,.4);padding-bottom:3px;
+  transition:border-color 200ms var(--ease)}
+.btn2:hover{border-color:var(--czerwien)}
+.pogl{position:absolute;right:18px;bottom:14px;z-index:3;font-size:.62rem;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(246,243,238,.52)}
 
-/* ---------- pracownia ---------- */
-.sek{padding:clamp(70px,10vw,130px) 0}
-.dwie{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
-  gap:clamp(30px,6vw,80px);align-items:start}
-@media(max-width:860px){.dwie{grid-template-columns:1fr;gap:28px}}
-.liczby{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px;
-  border-top:1px solid var(--linia);padding-top:26px}
-.liczby b{display:block;font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:600;
-  letter-spacing:-.02em;line-height:1;color:var(--biel)}
-.liczby span{display:block;margin-top:8px;font-size:.68rem;letter-spacing:.17em;
+/* ---------- sekcje ---------- */
+.sek{padding:clamp(66px,9vw,118px) 0}
+.sek.ciemniej{background:var(--tlo2)}
+.dwie{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(28px,6vw,80px)}
+@media(max-width:860px){.dwie{grid-template-columns:1fr;gap:22px}}
+
+.liczby{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;
+  margin-top:38px;padding-top:30px;border-top:1px solid var(--linia)}
+.liczby b{display:block;font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:500;
+  letter-spacing:-.02em;color:var(--biel);line-height:1}
+.liczby span{display:block;margin-top:7px;font-size:.74rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--szary2)}
+
+/* ---------- pas pelnoekranowy ---------- */
+.pas{position:relative;height:clamp(300px,52vw,560px);overflow:hidden;background:#15130F}
+.pas img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.pas::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(21,19,15,.34) 0%,rgba(21,19,15,0) 42%,
+    rgba(21,19,15,.74) 100%)}
+.pas-opis{position:absolute;z-index:2;left:0;right:0;bottom:30px}
+.pas-opis .wrap{display:flex;align-items:flex-end;justify-content:space-between;
+  gap:18px;flex-wrap:wrap}
+.pas-opis h3{margin:0;font-size:clamp(1.15rem,2.4vw,1.8rem);font-weight:500;
+  letter-spacing:-.01em}
+.pas-opis span{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(246,243,238,.72)}
 
 /* ---------- zakres ---------- */
-.zakres{background:var(--tlo2);border-top:1px solid var(--linia);
-  border-bottom:1px solid var(--linia)}
-.kolumny{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:clamp(26px,5vw,64px)}
-@media(max-width:700px){.kolumny{grid-template-columns:1fr;gap:26px}}
+.kolumny{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(26px,5vw,64px)}
+@media(max-width:700px){.kolumny{grid-template-columns:1fr;gap:30px}}
+.kolumny h3{margin:0 0 16px;font-size:.74rem;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--czerwien)}
 .lista{list-style:none;margin:0;padding:0}
-.lista li{padding:13px 0;border-bottom:1px solid var(--linia);
-  font-size:.9rem;letter-spacing:.07em;text-transform:uppercase;color:var(--szary)}
-.lista li:first-child{border-top:1px solid var(--linia)}
-.lista.mocna li{color:var(--biel);font-weight:500}
+.lista li{padding:12px 0;border-top:1px solid var(--linia);color:var(--biel);
+  font-size:1.02rem}
+.lista li:last-child{border-bottom:1px solid var(--linia)}
 
 /* ---------- realizacje ---------- */
-.siatka{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:clamp(12px,1.6vw,20px)}
-@media(max-width:700px){.siatka{grid-template-columns:1fr}}
-.kafel{position:relative;display:block;overflow:hidden;background:var(--tlo2);
-  cursor:zoom-in}
-.kafel.szeroki{grid-column:1/-1}
-.kafel img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2;
-  transition:transform .6s var(--ease),filter .4s var(--ease);
-  filter:saturate(.92) contrast(1.03)}
-.kafel.szeroki img{aspect-ratio:21/9}
-.kafel:hover img,.kafel:focus-visible img{transform:scale(1.035);filter:none}
-.kafel figcaption{position:absolute;inset:auto 0 0;padding:22px;
-  background:linear-gradient(180deg,rgba(10,8,7,0),rgba(10,8,7,.86));
-  display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
-.kafel b{display:block;font-size:.98rem;font-weight:600;letter-spacing:.01em}
-.kafel span{display:block;margin-top:3px;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--szary)}
-.kafel em{font-style:normal;font-size:.72rem;letter-spacing:.14em;
-  color:var(--czerwien);white-space:nowrap}
+.wyroznik{margin:-8px 0 34px;max-width:44ch;font-size:1.05rem;color:var(--biel)}
+.siatka{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.kafel{position:relative;margin:0;overflow:hidden;cursor:zoom-in;background:#15130F;
+  grid-column:span 2;aspect-ratio:4/3}
+.kafel.duzy{grid-column:span 4;aspect-ratio:16/9}
+.kafel.sredni{grid-column:span 3;aspect-ratio:3/2}
+@media(max-width:900px){
+  .siatka{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .kafel,.kafel.duzy,.kafel.sredni{grid-column:span 2;aspect-ratio:3/2}
+  .kafel.polowa{grid-column:span 1;aspect-ratio:1/1}
+}
+.kafel img{width:100%;height:100%;object-fit:cover;
+  transition:transform 620ms var(--ease),filter 420ms var(--ease);
+  filter:saturate(.94)}
+.kafel:hover img,.kafel:focus-visible img{transform:scale(1.045);filter:saturate(1.06)}
+.kafel figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:34px 18px 15px;
+  background:linear-gradient(180deg,rgba(21,19,15,0) 0%,rgba(21,19,15,.86) 72%);
+  display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.kafel figcaption b{font-weight:500;font-size:.95rem;letter-spacing:-.005em}
+.kafel figcaption em{font-style:normal;font-size:.72rem;letter-spacing:.1em;
+  color:rgba(246,243,238,.68);white-space:nowrap}
+.kafel:focus-visible{outline:2px solid var(--czerwien);outline-offset:3px}
 
-/* pozostale projekty jako lista */
-.inne{margin-top:46px;border-top:1px solid var(--linia)}
-.inne div{display:grid;grid-template-columns:1fr auto;gap:18px;padding:15px 0;
-  border-bottom:1px solid var(--linia);align-items:baseline}
-.inne p{margin:0;color:var(--biel);font-size:.93rem}
-.inne i{font-style:normal;color:var(--szary2);font-size:.75rem;
-  letter-spacing:.14em;white-space:nowrap}
+/* ---------- pozostale projekty ---------- */
+.pozostale{margin-top:52px;padding-top:30px;border-top:1px solid var(--linia)}
+.pozostale ul{list-style:none;margin:16px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px}
+@media(max-width:760px){.pozostale ul{grid-template-columns:1fr}}
+.pozostale li{padding:13px 0;border-bottom:1px solid var(--linia);
+  display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.pozostale b{font-weight:400;color:var(--biel);font-size:.98rem}
+.pozostale em{font-style:normal;font-size:.76rem;letter-spacing:.08em;
+  color:var(--szary2);white-space:nowrap}
 
 /* ---------- kontakt ---------- */
-.kontakt a.duzy{display:inline-block;font-size:clamp(1.3rem,3.6vw,2.2rem);
-  font-weight:500;letter-spacing:-.01em;color:var(--biel);
-  border-bottom:1px solid var(--szary2);padding-bottom:3px;
-  transition:border-color .18s var(--ease),color .18s var(--ease)}
-.kontakt a.duzy:hover{border-color:var(--czerwien)}
-.adres{margin-top:34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:24px;border-top:1px solid var(--linia);padding-top:26px}
-@media(max-width:700px){.adres{grid-template-columns:1fr;gap:18px}}
-.adres h3{margin:0 0 7px;font-size:.68rem;font-weight:600;letter-spacing:.2em;
+.kontakt{background:var(--tlo3)}
+.duzy{font-size:clamp(1.4rem,3.6vw,2.4rem);font-weight:500;letter-spacing:-.02em;
+  border-bottom:1px solid var(--linia);padding-bottom:5px;
+  transition:border-color 220ms var(--ease)}
+.duzy:hover{border-color:var(--czerwien)}
+.adres{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;padding-top:28px;border-top:1px solid var(--linia)}
+@media(max-width:700px){.adres{grid-template-columns:1fr;gap:22px}}
+.adres h3{margin:0 0 8px;font-size:.7rem;font-weight:500;letter-spacing:.2em;
   text-transform:uppercase;color:var(--szary2)}
-.adres p{margin:0;color:var(--biel);font-size:.95rem;line-height:1.5}
-.mapa{display:inline-block;margin-top:6px;color:var(--szary);font-size:.86rem;border-bottom:1px solid rgba(242,239,234,.25);padding-bottom:1px;transition:color 180ms cubic-bezier(.23,1,.32,1),border-color 180ms cubic-bezier(.23,1,.32,1)}
+.adres p{margin:0;color:var(--biel);font-size:.97rem;line-height:1.55}
+.mapa{display:inline-block;margin-top:8px;color:var(--szary);font-size:.86rem;
+  border-bottom:1px solid rgba(246,243,238,.26);padding-bottom:1px;
+  transition:color 180ms var(--ease),border-color 180ms var(--ease)}
 .mapa:hover{color:var(--biel);border-color:var(--czerwien)}
 
-/* ---------- stopka ---------- */
-footer{border-top:1px solid var(--linia);padding:30px 0 40px;
-  font-size:.74rem;color:var(--szary2)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between}
-.nota{margin-top:14px;font-size:.72rem;color:var(--szary2);line-height:1.5;
-  max-width:70ch}
+footer{padding:34px 0 40px;border-top:1px solid var(--linia);background:var(--tlo)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:.8rem;color:var(--szary2)}
+.nota{margin-top:18px;font-size:.76rem;color:var(--szary2);max-width:88ch;line-height:1.55}
 
-/* ---------- podglad zdjec ---------- */
-.lbx{position:fixed;inset:0;z-index:999;background:rgba(6,5,4,.96);
-  display:none;align-items:center;justify-content:center;touch-action:none}
-.lbx.on{display:flex}
-.lbx img{max-width:94vw;max-height:84vh;width:auto;height:auto;
-  opacity:0;transition:opacity .18s var(--ease)}
-.lbx img.gotowe{opacity:1}
-.lbx-opis{position:absolute;left:0;right:0;bottom:22px;text-align:center;
-  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--szary)}
-.lbx-btn{position:absolute;width:48px;height:48px;border:0;border-radius:50%;
-  background:rgba(242,239,234,.1);color:var(--biel);font-size:1.4rem;
-  display:grid;place-items:center;cursor:pointer;
-  transition:background .14s var(--ease),transform .14s var(--ease)}
-.lbx-btn:hover{background:rgba(242,239,234,.2)}
-.lbx-btn:active{transform:scale(.94)}
-.lbx-prev{left:16px;top:50%;margin-top:-24px}
-.lbx-next{right:16px;top:50%;margin-top:-24px}
-.lbx-x{right:16px;top:16px;width:42px;height:42px;font-size:1.1rem}
-@media(max-width:620px){.lbx-btn{width:40px;height:40px}.lbx-prev{left:6px}.lbx-next{right:6px}}
+/* ---------- powiekszenie ---------- */
+.lupa{position:fixed;inset:0;z-index:90;background:rgba(14,13,11,.96);
+  display:none;align-items:center;justify-content:center;padding:52px 20px}
+.lupa.on{display:flex}
+.lupa img{max-width:min(1500px,96vw);max-height:84vh;object-fit:contain}
+.lupa-opis{position:absolute;left:0;right:0;bottom:22px;text-align:center;
+  font-size:.86rem;color:var(--szary);padding:0 20px}
+.lupa button{position:absolute;background:none;border:0;color:var(--biel);
+  cursor:pointer;padding:14px;line-height:0;opacity:.72;
+  transition:opacity 180ms var(--ease),transform 180ms var(--ease)}
+.lupa button:hover{opacity:1}
+.lupa button:active{transform:scale(.94)}
+.lupa .zamknij{top:14px;right:16px;font-size:1.7rem;line-height:1}
+.lupa .poprz{left:8px;top:50%;transform:translateY(-50%);font-size:2.2rem}
+.lupa .nast{right:8px;top:50%;transform:translateY(-50%);font-size:2.2rem}
+.lupa .poprz:active,.lupa .nast:active{transform:translateY(-50%) scale(.94)}
 
-/* na waskim ekranie kadr z szerokiego zdjecia lapal latarnie zamiast budynku */
-@media(max-width:700px){
-  .hero img{object-position:30% 46%}
-  .hero .lock{letter-spacing:.1em}
-}
-:focus-visible{outline:2px solid var(--czerwien);outline-offset:3px}
+.pojaw{opacity:0;transform:translateY(16px);
+  transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+.pojaw.widac{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
-  .kafel img,.lbx img,.lbx-btn,.pasek{transition:none}
+  .pojaw{opacity:1;transform:none;transition:none}
+  .kafel img{transition:none}
 }
 </style>
 </head>
@@ -205,40 +227,48 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
 
 <header class="pasek" id="pasek">
   <div class="wrap">
-    <a class="znak" href="#top">A<i></i>M R<small>Architekci &amp; Partnerzy</small></a>
+    <a class="znak" href="#gora"><i>AM</i>R <span>Architekci &amp; Partnerzy</span></a>
     <nav class="menu">
       <a href="#pracownia">Pracownia</a>
-      <a href="#zakres">Zakres</a>
       <a href="#realizacje">Realizacje</a>
+      <a href="#zakres">Zakres</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
+    <a class="tel" href="tel:+48501061258">+48 501 061 258</a>
   </div>
 </header>
 
-<section class="hero" id="top">
-  <img src="img/hero-venus.webp" alt="Galeria Venus w Świdniku o zmierzchu, projekt pracowni AMR" fetchpriority="high">
+<section class="hero" id="gora">
+  <picture>
+    <source srcset="img/hero-m.webp" media="(max-width:700px)">
+    <img src="img/hero.webp" alt="Wnętrze galerii handlowej z przeszklonym dachem" fetchpriority="high">
+  </picture>
   <div class="wrap">
-    <p class="lock">A<i></i><b>M R</b></p>
-    <p class="pod">Architekci &amp; Partnerzy</p>
-    <div class="kreska"></div>
-    <p class="zdanie">Projektujemy obiekty, które muszą działać: galerie handlowe, budynki użyteczności publicznej i zakłady przemysłowe.</p>
-    <div class="meta">
-      <span>Pracownia od <b>1997</b></span>
-      <span>Lublin</span>
-      <span>Mirosław Rossa, architekt</span>
+    <h1 class="hero-znak"><i>AM</i>R</h1>
+    <p class="hero-pod">Architekci &amp; Partnerzy &middot; Lublin</p>
+    <p class="hero-txt">Projektujemy obiekty, które muszą działać. Galerie handlowe, budynki
+      użyteczności publicznej i zakłady przemysłowe. Od 1997 roku.</p>
+    <div class="hero-dol">
+      <a class="btn" href="#realizacje">Zobacz realizacje</a>
+      <a class="btn2" href="#kontakt">Kontakt</a>
     </div>
   </div>
+  <span class="pogl">Zdjęcie poglądowe</span>
 </section>
 
 <section class="sek" id="pracownia">
-  <div class="wrap dwie">
+  <div class="wrap dwie pojaw">
     <div>
       <p class="nad">Pracownia</p>
       <h2>Od koncepcji do projektu pełnobranżowego</h2>
     </div>
     <div>
-      <p class="jasny">Pracownia działa w Lublinie od 1997 roku. Prowadzimy temat od opracowania studialnego i koncepcji, przez projekt architektoniczny, po dokumentację pełnobranżową.</p>
-      <p>Największą część dorobku stanowią obiekty handlowo-usługowe, w tym kolejne etapy galerii Olimp w Lublinie i galerii Venus w Świdniku, oraz obiekty przemysłowe realizowane dla Lubelskiego Węgla Bogdanka i drukarni DAKO Next.</p>
+      <p class="jasny">Pracownia działa w Lublinie od 1997 roku. Prowadzimy temat od opracowania
+        studialnego i koncepcji, przez projekt architektoniczny, po dokumentację
+        pełnobranżową.</p>
+      <p>Największą część dorobku stanowią obiekty handlowo-usługowe, w tym kolejne etapy
+        galerii Olimp w Lublinie i galerii Venus w Świdniku, oraz obiekty przemysłowe
+        realizowane dla Lubelskiego Węgla Bogdanka i drukarni DAKO Next.</p>
       <div class="liczby">
         <div><b>1997</b><span>Rok założenia</span></div>
         <div><b>24</b><span>Projekty w zestawieniu</span></div>
@@ -248,13 +278,78 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
   </div>
 </section>
 
-<section class="sek zakres" id="zakres">
+<div class="pas">
+  <img src="img/band-venus.webp" alt="Galeria Venus w Świdniku wieczorem" loading="lazy" decoding="async">
+  <div class="pas-opis">
+    <div class="wrap">
+      <h3>Galeria Venus 2, Świdnik</h3>
+      <span>Projekt zrealizowany &middot; 2009-2012</span>
+    </div>
+  </div>
+</div>
+
+<section class="sek" id="realizacje">
   <div class="wrap">
+    <p class="nad">Realizacje</p>
+    <h2>Wybrane obiekty oddane do użytku</h2>
+    <p class="wyroznik">Obiekty zbudowane i oddane do użytku, nie wizualizacje.</p>
+
+    <div class="siatka" id="siatka">
+      <figure class="kafel duzy" tabindex="0" role="button">
+        <img src="img/r-venus2.webp" alt="Galeria Venus 2 w Świdniku" loading="lazy" decoding="async">
+        <figcaption><b>Galeria Venus 2</b><em>Świdnik &middot; 2009-2012</em></figcaption>
+      </figure>
+      <figure class="kafel" tabindex="0" role="button">
+        <img src="img/r-olimp5.webp" alt="Galeria Olimp 5 z multikinem w Lublinie" loading="lazy" decoding="async">
+        <figcaption><b>Olimp 5, multikino</b><em>Lublin &middot; 2011-2013</em></figcaption>
+      </figure>
+      <figure class="kafel sredni" tabindex="0" role="button">
+        <img src="img/r-olimp3.webp" alt="Galeria Olimp 3 w Lublinie" loading="lazy" decoding="async">
+        <figcaption><b>Galeria Olimp 3</b><em>Lublin</em></figcaption>
+      </figure>
+      <figure class="kafel sredni" tabindex="0" role="button">
+        <img src="img/r-venus1.webp" alt="Galeria Venus 1 w Świdniku" loading="lazy" decoding="async">
+        <figcaption><b>Galeria Venus 1</b><em>Świdnik</em></figcaption>
+      </figure>
+      <figure class="kafel polowa" tabindex="0" role="button">
+        <img src="img/r-olimp1.webp" alt="Galeria Olimp 1 w Lublinie" loading="lazy" decoding="async">
+        <figcaption><b>Galeria Olimp 1</b><em>Lublin</em></figcaption>
+      </figure>
+      <figure class="kafel polowa" tabindex="0" role="button">
+        <img src="img/r-olimp2.webp" alt="Galeria Olimp 2 w Lublinie" loading="lazy" decoding="async">
+        <figcaption><b>Galeria Olimp 2</b><em>Lublin</em></figcaption>
+      </figure>
+      <figure class="kafel sredni" tabindex="0" role="button">
+        <img src="img/r-olimp5-lot.webp" alt="Galeria Olimp 5 w Lublinie, widok z góry" loading="lazy" decoding="async">
+        <figcaption><b>Olimp 5, widok z góry</b><em>Lublin &middot; 2011-2013</em></figcaption>
+      </figure>
+      <figure class="kafel sredni" tabindex="0" role="button">
+        <img src="img/r-venus2b.webp" alt="Galeria Venus 2 w Świdniku, elewacja" loading="lazy" decoding="async">
+        <figcaption><b>Venus 2, elewacja</b><em>Świdnik &middot; 2009-2012</em></figcaption>
+      </figure>
+    </div>
+
+    <div class="pozostale">
+      <p class="nad">Poza galeriami</p>
+      <ul>
+        <li><b>Drukarnia DAKO Next, cztery etapy</b><em>Lubartów &middot; 2008-2013</em></li>
+        <li><b>Budynki maszyn wyciągowych i nadszybia, LW Bogdanka</b><em>2004-2005</em></li>
+        <li><b>Budynek mieszkalno-usługowy SM Instalator</b><em>Lublin &middot; konkurs SARP</em></li>
+        <li><b>Zakłady naukowe Akademii Rolniczej, koncepcja</b><em>Lublin &middot; 2001</em></li>
+        <li><b>Ośrodek sportowy, koncepcja</b><em>Warszawa &middot; 2000</em></li>
+        <li><b>Galeria handlowo-usługowa, koncepcja</b><em>Puławy &middot; 2004-2005</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sek ciemniej" id="zakres">
+  <div class="wrap pojaw">
     <p class="nad">Zakres</p>
     <div class="kolumny">
       <div>
-        <h2>Co projektujemy</h2>
-        <ul class="lista mocna">
+        <h3>Co projektujemy</h3>
+        <ul class="lista">
           <li>Obiekty użyteczności publicznej</li>
           <li>Obiekty handlowo-usługowe</li>
           <li>Obiekty przemysłowe</li>
@@ -263,7 +358,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
         </ul>
       </div>
       <div>
-        <h2>Jak pracujemy</h2>
+        <h3>Jak pracujemy</h3>
         <ul class="lista">
           <li>Opracowania studialne</li>
           <li>Koncepcje</li>
@@ -276,54 +371,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
   </div>
 </section>
 
-<section class="sek" id="realizacje">
-  <div class="wrap">
-    <p class="nad">Realizacje</p>
-    <h2>Wybrane obiekty oddane do użytku</h2>
-    <p class="jasny wyroznik">Obiekty zbudowane i oddane do użytku, nie wizualizacje.</p>
-    <div class="siatka" id="siatka">
-      <figure class="kafel szeroki" tabindex="0" role="button" aria-label="Powiększ: Galeria Venus w Świdniku">
-        <img src="img/hero-venus.webp" alt="Galeria Venus w Świdniku o zmierzchu">
-        <figcaption><span class="t"><b>Galeria Venus</b><span>Świdnik</span></span><em>realizacja</em></figcaption>
-      </figure>
-      <figure class="kafel" tabindex="0" role="button" aria-label="Powiększ: Galeria Olimp z multikinem">
-        <img src="img/p-olimp5.webp" alt="Galeria Olimp z multikinem w Lublinie">
-        <figcaption><span class="t"><b>Galeria Olimp z multikinem</b><span>Lublin</span></span><em>2011-2013</em></figcaption>
-      </figure>
-      <figure class="kafel" tabindex="0" role="button" aria-label="Powiększ: Galeria Venus, elewacja frontowa">
-        <img src="img/p-venus2.webp" alt="Galeria Venus w Świdniku, elewacja frontowa">
-        <figcaption><span class="t"><b>Galeria Venus</b><span>Świdnik</span></span><em>realizacja</em></figcaption>
-      </figure>
-      <figure class="kafel" tabindex="0" role="button" aria-label="Powiększ: Galeria Olimp">
-        <img src="img/p-olimp-a.webp" alt="Galeria Olimp w Lublinie">
-        <figcaption><span class="t"><b>Galeria Olimp</b><span>Lublin</span></span><em>realizacja</em></figcaption>
-      </figure>
-      <figure class="kafel" tabindex="0" role="button" aria-label="Powiększ: obiekt handlowo-usługowy">
-        <img src="img/p-obiekt-b.webp" alt="Obiekt handlowo-usługowy, Lubelszczyzna">
-        <figcaption><span class="t"><b>Obiekt handlowo-usługowy</b><span>Lubelszczyzna</span></span><em>realizacja</em></figcaption>
-      </figure>
-    </div>
-
-    <div class="inne">
-      <div><p>Drukarnia DAKO Next, cztery etapy</p><i>Lubartów &middot; 2008-2013</i></div>
-      <div><p>Modernizacja budynków maszyn wyciągowych i nadszybia</p><i>LW Bogdanka &middot; 2004-2005</i></div>
-      <div><p>Budynek mieszkalno-usługowy SM Instalator, projekt wybrany w konkursie SARP</p><i>Lublin</i></div>
-      <div><p>Koncepcja budynku zakładów naukowych Akademii Rolniczej</p><i>Lublin &middot; 2001</i></div>
-      <div><p>Koncepcja ośrodka sportowego</p><i>Warszawa &middot; 2000</i></div>
-      <div><p>Koncepcja galerii handlowo-usługowej</p><i>Puławy &middot; 2004-2005</i></div>
-    </div>
-  </div>
-</section>
-
 <section class="sek kontakt" id="kontakt">
-  <div class="wrap">
+  <div class="wrap pojaw">
     <p class="nad">Kontakt</p>
     <h2>Porozmawiajmy o projekcie</h2>
     <p><a class="duzy" href="mailto:rossa@rossa.pl">rossa@rossa.pl</a></p>
     <div class="adres">
       <div><h3>Pracownia</h3><p>AMR Architekci &amp; Partnerzy<br>Mirosław Rossa, architekt</p></div>
-      <div><h3>Adres</h3><p>ul. Zbożowa 6<br>20-827 Lublin<br><a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Zbo%C5%BCowa+6%2C+20-827+Lublin" target="_blank" rel="noopener">Dojazd na mapie</a></p></div>
-      <div><h3>Telefon</h3><p><a href="tel:+48501061258">+48 501 061 258</a><br><a href="tel:+48817428658">+48 81 742 86 58</a></p></div>
+      <div><h3>Adres</h3><p>ul. Zbożowa 6<br>20-827 Lublin<br>
+        <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Zbo%C5%BCowa+6%2C+20-827+Lublin" target="_blank" rel="noopener">Dojazd na mapie</a></p></div>
+      <div><h3>Telefon</h3><p><a href="tel:+48501061258">+48 501 061 258</a><br>
+        <a href="tel:+48817428658">+48 81 742 86 58</a></p></div>
     </div>
   </div>
 </section>
@@ -334,83 +392,79 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-bet
     <span>rossa@rossa.pl &middot; +48 501 061 258</span>
   </div>
   <div class="wrap">
-    <p class="nota">Wersja koncepcyjna przygotowana do rozmowy o nowej stronie. Zdjęcia i opisy pochodzą z materiałów pracowni, część wymaga uzupełnienia i potwierdzenia podpisów. Strona nie jest jeszcze podpięta pod domenę ani zgłoszona do wyszukiwarek.</p>
+    <p class="nota">Wersja koncepcyjna przygotowana do rozmowy o nowej stronie. Zdjęcia
+      realizacji pochodzą z materiałów pracowni i mają niską rozdzielczość, docelowo do
+      wymiany na oryginały. Zdjęcie otwierające jest poglądowe i nie przedstawia obiektu
+      pracowni. Strona nie jest podpięta pod domenę ani zgłoszona do wyszukiwarek.</p>
   </div>
 </footer>
 
+<div class="lupa" id="lupa" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <button class="zamknij" id="zamknij" aria-label="Zamknij">&times;</button>
+  <button class="poprz" id="poprz" aria-label="Poprzednie zdjęcie">&lsaquo;</button>
+  <img id="lupa-img" src="" alt="">
+  <button class="nast" id="nast" aria-label="Następne zdjęcie">&rsaquo;</button>
+  <p class="lupa-opis" id="lupa-opis"></p>
+</div>
+
 <script>
 (function(){
-  /* gorny pasek dostaje tlo dopiero po zjechaniu z hero */
-  var pasek = document.getElementById('pasek');
-  function stan(){ pasek.classList.toggle('tlo', window.scrollY > 40); }
-  addEventListener('scroll', stan, {passive:true}); stan();
-})();
+  var pasek=document.getElementById('pasek');
+  function przewin(){pasek.classList.toggle('przyklejony',window.scrollY>40);}
+  przewin(); window.addEventListener('scroll',przewin,{passive:true});
 
-(function(){
-  /* podglad zdjec: strzalki, klawiatura, przesuwanie palcem */
-  var kafle = [].slice.call(document.querySelectorAll('.kafel'));
-  if(!kafle.length) return;
-
-  var ov = document.createElement('div');
-  ov.className = 'lbx';
-  ov.setAttribute('role','dialog');
-  ov.setAttribute('aria-modal','true');
-  ov.setAttribute('aria-label','Podgląd zdjęcia');
-  ov.innerHTML = '<button class="lbx-btn lbx-x" type="button" aria-label="Zamknij">✕</button>'
-    + '<button class="lbx-btn lbx-prev" type="button" aria-label="Poprzednie">‹</button>'
-    + '<img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">'
-    + '<button class="lbx-btn lbx-next" type="button" aria-label="Następne">›</button>'
-    + '<p class="lbx-opis"></p>';
-  document.body.appendChild(ov);
-
-  var fot = ov.querySelector('img'), opis = ov.querySelector('.lbx-opis');
-  var nr = 0, wracac = null;
+  var kafle=[].slice.call(document.querySelectorAll('#siatka .kafel'));
+  var lupa=document.getElementById('lupa');
+  var obraz=document.getElementById('lupa-img');
+  var opis=document.getElementById('lupa-opis');
+  var nr=0;
 
   function pokaz(i){
-    nr = (i + kafle.length) % kafle.length;
-    var k = kafle[nr], im = k.querySelector('img');
-    fot.classList.remove('gotowe');
-    fot.src = im.currentSrc || im.src;
-    fot.alt = im.alt || '';
-    var b = k.querySelector('b'), m = k.querySelector('figcaption span span');
-    opis.textContent = (b ? b.textContent : '') + (m ? ' · ' + m.textContent : '')
-      + '   ' + (nr+1) + '/' + kafle.length;
+    nr=(i+kafle.length)%kafle.length;
+    var k=kafle[nr], im=k.querySelector('img'), c=k.querySelector('figcaption');
+    obraz.src=im.src; obraz.alt=im.alt;
+    opis.textContent=c.querySelector('b').textContent+' · '
+      +c.querySelector('em').textContent+'  ('+(nr+1)+'/'+kafle.length+')';
+    lupa.classList.add('on');
+    document.body.style.overflow='hidden';
   }
-  fot.addEventListener('load', function(){ fot.classList.add('gotowe'); });
+  function schowaj(){lupa.classList.remove('on');document.body.style.overflow='';}
 
-  function otworz(i, zrodlo){
-    wracac = zrodlo; ov.classList.add('on');
-    document.body.style.overflow = 'hidden';
-    pokaz(i); ov.querySelector('.lbx-x').focus();
-  }
-  function zamknij(){
-    ov.classList.remove('on'); document.body.style.overflow = '';
-    fot.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='; if(wracac) wracac.focus({preventScroll:true});
-  }
-
-  kafle.forEach(function(k, i){
-    k.addEventListener('click', function(){ otworz(i, k); });
-    k.addEventListener('keydown', function(e){
-      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); otworz(i, k); }
+  kafle.forEach(function(k,i){
+    k.addEventListener('click',function(){pokaz(i);});
+    k.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();pokaz(i);}
     });
   });
-  ov.querySelector('.lbx-x').addEventListener('click', zamknij);
-  ov.querySelector('.lbx-prev').addEventListener('click', function(){ pokaz(nr-1); });
-  ov.querySelector('.lbx-next').addEventListener('click', function(){ pokaz(nr+1); });
-  ov.addEventListener('click', function(e){ if(e.target === ov) zamknij(); });
-  document.addEventListener('keydown', function(e){
-    if(!ov.classList.contains('on')) return;
-    if(e.key === 'Escape') zamknij();
-    else if(e.key === 'ArrowLeft') pokaz(nr-1);
-    else if(e.key === 'ArrowRight') pokaz(nr+1);
+  document.getElementById('zamknij').addEventListener('click',schowaj);
+  document.getElementById('poprz').addEventListener('click',function(e){
+    e.stopPropagation();pokaz(nr-1);});
+  document.getElementById('nast').addEventListener('click',function(e){
+    e.stopPropagation();pokaz(nr+1);});
+  lupa.addEventListener('click',function(e){if(e.target===lupa)schowaj();});
+  document.addEventListener('keydown',function(e){
+    if(!lupa.classList.contains('on'))return;
+    if(e.key==='Escape')schowaj();
+    if(e.key==='ArrowLeft')pokaz(nr-1);
+    if(e.key==='ArrowRight')pokaz(nr+1);
   });
-  var x0 = null;
-  ov.addEventListener('pointerdown', function(e){ x0 = e.clientX; });
-  ov.addEventListener('pointerup', function(e){
-    if(x0 === null) return;
-    var dx = e.clientX - x0; x0 = null;
-    if(Math.abs(dx) > 45) pokaz(nr + (dx < 0 ? 1 : -1));
-  });
+  var x0=null;
+  lupa.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  lupa.addEventListener('touchend',function(e){
+    if(x0===null)return;
+    var d=e.changedTouches[0].clientX-x0;
+    if(Math.abs(d)>45) pokaz(d>0?nr-1:nr+1);
+    x0=null;
+  },{passive:true});
+
+  if('IntersectionObserver' in window){
+    var o=new IntersectionObserver(function(w){
+      w.forEach(function(p){if(p.isIntersecting){p.target.classList.add('widac');o.unobserve(p.target);}});
+    },{rootMargin:'0px 0px -8% 0px'});
+    [].slice.call(document.querySelectorAll('.pojaw')).forEach(function(e){o.observe(e);});
+  }else{
+    [].slice.call(document.querySelectorAll('.pojaw')).forEach(function(e){e.classList.add('widac');});
+  }
 })();
 </script>
 </body>
